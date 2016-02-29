@@ -23,6 +23,6 @@ I don't know why the stop button disappears from the run tab but ^F2 works to ki
 git init
 git status
 git add .
-git commit -m "first commit"
+git commit -m "initial commit"
 git remote add origin https://github.com/smclallen/collegeRidesBackup.git
 git push -u origin master
