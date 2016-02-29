@@ -26,3 +26,6 @@ git add .
 git commit -m "initial commit"
 git remote add origin https://github.com/smclallen/collegeRidesBackup.git
 git push -u origin master
+
+--------------------------------
+confirmation_token=xJFk6NxPQTvBQoHg_tAa

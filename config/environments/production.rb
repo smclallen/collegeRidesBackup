@@ -95,10 +95,10 @@ Rails.application.configure do
 
 
   #config.assets.raise_runtime_errors = true
-  config.action_mailer.default_url_options = { host: '159.203.250.174' }
+  config.action_mailer.default_url_options = { host: '104.236.184.83' }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
- Paperclip.options[:command_path] = "/usr/local/bin/"
+ Paperclip.options[:command_path] = "/usr/bin/"
 
 end

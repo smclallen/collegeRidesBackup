@@ -6,7 +6,7 @@ class ContactMailer < ApplicationMailer
     @name = name
     @subject = subject
     @message = message
-    @url = 'http://159.203.250.174/page/home'
+    @url = 'http://104.236.184.83/page/home'
     mail(to: @email, subject: 'Thank for for contacting CollegeRides.com')
   end
 

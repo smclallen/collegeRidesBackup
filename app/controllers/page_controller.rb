@@ -16,7 +16,7 @@ class PageController < ApplicationController
     @all = params[:all]
     if @commit == "Submit"
       ContactMailer.contact_email(@name, @email, @subject, @message).deliver_now
-      redirect_to page_home_url
+      redirect_to page_home_url, notice: 'Your message was successfully sent.'
       end
   end
 
