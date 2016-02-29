@@ -1,0 +1,69 @@
+<%= form_for @profile, html: { multipart: true } do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <h2>Edit Your Profile Settings</h2>
+      <div class="field">
+        <%= f.label :major %>
+        <%= f.text_field :major %>
+        <%= f.label :fullname %>
+        <%= f.text_field :fullname %>
+
+        <%= f.label :age %>
+        <%= f.number_field :age %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <%= f.label :schoolName %>
+        <%= f.text_field :schoolName %>
+
+        <%= f.label :bio %>
+        <%= f.text_area :bio %>
+
+        <%= f.label :photo %>
+        <!--<#%= f.file_field :photo %>-->
+            <%= f.cropbox :photo %>
+            <%= f.crop_preview :photo %>
+            <!--<#%= f.submit 'Save' %>-->
+
+
+
+      </div>
+      <div class="field gender-field">
+        <%= f.label :gender %><br>
+        <%= radio_button( 'profile', :gender, 'Female') %>
+        <%= label_tag( 'Female') %><br>
+        <%= radio_button( 'profile', :gender, 'Male') %>
+        <%= label_tag( 'Male') %><br><br>
+
+          <%= f.label :smoke %><br>
+          <%= f.check_box :smoke %>
+
+          <%= f.label :pet %><br>
+          <%= f.check_box :pet %>
+
+          <%= f.label :drive %><br>
+          <%= f.check_box :drive %>
+
+
+      </div>
+
+
+      <!--<div class="field">-->
+        <%#= f.label :avatar %><br>
+        <!--<%#= f.text_field :avatar %>-->
+      <!--</div>-->
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+
+<% end %>
